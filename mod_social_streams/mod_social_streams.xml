@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : mod_social_streams.xml
+    Created on : 23 February 2012, 17:32
+    Author     : stuart
+    Description:
+        Purpose of the document follows.
+-->
+
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+    <name>Social Streams</name>
+
+    <!-- Name of the Author -->
+    <author>Appropriate Solutions</author>
+
+    <!-- Version Date of the Module -->
+    <creationDate>2012-02-23</creationDate>
+
+    <!-- Copyright information -->
+    <copyright>All rights reserved by Appropriate Solutions 2012.</copyright>
+
+    <!-- License Information -->
+    <license>GPL 2.0</license>
+
+    <!-- Author's email address -->
+    <authorEmail>mail@appropriatesolutions.co.uk</authorEmail>
+
+    <!-- Author's website -->
+    <authorUrl>www.appropriatesolutions.co.uk</authorUrl>
+
+    <!-- Module version number -->
+    <version>0.1.0</version>
+
+    <!-- Description of what the module does -->
+    <description>Displays the cached Social Media activity from a number of Social Networks in one combined stream
+    </description>
+
+    <!-- Listing of all files that should be installed for the module to function -->
+    <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+	<filename module="mod_social_streams">mod_social_streams.php</filename>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<folder>tmpl</folder>
+	<folder>css</folder>
+	<folder>images</folder>
+    </files>
+    <!-- Optional parameters -->
+    <params>
+	<param type="spacer" default="Connections" />
+	<param name="show_connections" type="radio" default="1" label="Show Connections" description="Display the Social Network Connections">
+	    <option value="1">Show</option>
+	    <option value="0">Hide</option>
+	</param>
+	<param name="connection_count" type="text" label="Number of Connection" default="8" description="The number of Connections to show" />
+	<param name="connection_image_size" type="list" default="0" label="Connection Image Size" description="What size of Profile Image should be used?">
+	    <option value="mini">Mini (24x24px)</option>
+	    <option value="normal">Normal (48x48px)</option>
+	    <option value="bigger">Bigger (73x73px)</option>
+	</param>
+	<param type="spacer" default="Facebook" />
+	<param name="facebook_include" type="radio" default="0" label="Include Facebook Account" description="Show the posts and friend information from the Facebook account?">
+	    <option value="0">Hide</option>
+	    <option value="1">Show</option>
+	</param>
+	<param type="spacer" default="Twitter" />
+	<param name="twitter_include" type="radio" default="0" label="Include Twitter Account" description="Show the tweets and follower information from the Twitter account?">
+	    <option value="0">Hide</option>
+	    <option value="1">Show</option>
+	</param>
+	<param name="twitter_show_image" type="radio" default="0" label="Show Profile Image?" description="Show the profile image for the Twitter account?">
+	    <option value="0">Hide Image</option>
+	    <option value="1">Show Image</option>
+	</param>
+	<param type="spacer" default="Google+" />
+	<param name="google_include" type="radio" default="0" label="Include Google+ Account" description="Show the posts and circle information from the Google account?">
+	    <option value="0">Hide</option>
+	    <option value="1">Show</option>
+	</param>
+	<param name="google_show_content" type="radio" default="0" label="Show Full Content" description="Google+ posts can get very large, should the full content be displayed or just the title?">
+	    <option value="0">Only Title</option>
+	    <option value="1">Full Content</option>
+	</param>
+	<param type="spacer" default="LinkedIn" />
+	<param name="linkedin_include" type="radio" default="0" label="Include LinkedIn Account" description="Show the updates and contact information from the LinkedIn account?">
+	    <option value="0">Hide</option>
+	    <option value="1">Show</option>
+	</param>
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+    </params>
+</install>
